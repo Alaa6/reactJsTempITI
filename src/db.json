@@ -1,0 +1,50 @@
+  {
+  "posts": [
+    {
+      "id": 1,
+      "title": " post 1",
+      "author": "typicode" ,
+      "body" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut pulvinar diam, ac interdum ipsum. Nulla ornare tincidunt mauris, in scelerisque lorem fringilla sit amet. Ut hendrerit magna ac dictum ullamcorper. Nam non bibendum metus. Sed porta vitae sem sit amet placerat. "
+    } ,
+    {
+      "id": 2,
+      "title": "post 2 ",
+      "author": "typicode" ,
+      "body" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut pulvinar diam, ac interdum ipsum. Nulla ornare tincidunt mauris, in scelerisque lorem fringilla sit amet. Ut hendrerit magna ac dictum ullamcorper. Nam non bibendum metus. Sed porta vitae sem sit amet placerat. "
+
+    } ,
+    {
+      "id": 3,
+      "title": "post 3",
+      "author": "typicode" ,
+      "body" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut pulvinar diam, ac interdum ipsum. Nulla ornare tincidunt mauris, in scelerisque lorem fringilla sit amet. Ut hendrerit magna ac dictum ullamcorper. Nam non bibendum metus. Sed porta vitae sem sit amet placerat. "
+
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Alaa Ashraf",
+      "age":  24
+    } ,
+    {
+      "id": 2, 
+      "name": "Alaaa aaaaa",
+      "age":  24
+    } ,
+    {
+      "id": 3,
+      "name": "Alaa bbbbbb",
+      "age":  24
+    } ,
+    {
+      "id": 4,
+      "name": "Alaa fffff",
+      "age":  24
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
+

@@ -1,0 +1,13 @@
+
+.title {
+    margin-left: 10px; 
+    color: #212121;
+    text-align: center;
+  } 
+  
+.body {
+    margin: 15px; 
+    color: #212121;
+    background-color: lightgray;
+    padding: 10px;
+  }
