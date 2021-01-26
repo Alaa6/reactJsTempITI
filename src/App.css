@@ -1,1 +1,11 @@
+body {
+    /* background-image: url('./musicBg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
 
+    background-color: #eee;
+    font-family: Tahoma;
+}
+.container {
+    margin-top:  7%;
+}

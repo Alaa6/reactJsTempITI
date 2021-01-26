@@ -6,7 +6,7 @@ function students(props) {
 
     console.log(props.list);
     
-    let list = props.list.map((item) => {
+    let list = props.list.students.map((item) => {
         console.log(item);
         
 

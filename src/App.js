@@ -7,7 +7,13 @@ import DB from './db.json';
 import NewsList from './Components/newsList'
 import Students from './Components/student'
 import Register from './Components/register'
+import Home from './Components/home'
+import About from './Components/about'
+import Product from './Components/product'
 
+
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import ArticleDetails from './Components/articleDetails';
 
 class App extends Component {
 
@@ -24,8 +30,9 @@ class App extends Component {
       //filteredList: DB ,
 
       db: DB.students,
-      newDB : DB.students
-     
+      newDB: DB
+
+
 
 
     }
@@ -55,7 +62,7 @@ class App extends Component {
 
 
 
-  addStudent =(_name , _age) =>{
+  addStudent = (_name, _age) => {
 
     // this.state.db.push({name : _name, age : _age}) 
     // this.setState ({
@@ -63,14 +70,14 @@ class App extends Component {
     // })
 
     this.setState((state) => {
-      state.newDB.push({name : _name, age : _age}) 
-          return state;
-    
-        })
+      state.newDB.students.push({ name: _name, age: _age })
+      return state;
+
+    })
 
 
 
-   
+
 
   }
 
@@ -80,8 +87,11 @@ class App extends Component {
 
   render() {
 
-   
-    
+    console.log(this.state.newDB, 'newDB');
+    console.log(this.state.db, 'db');
+
+
+
 
     const images = [
 
@@ -174,7 +184,11 @@ class App extends Component {
 
 
     return (
-      <div >
+
+      <Router>
+
+
+        {/* <div > */}
 
         {/* <h1>Day 1 </h1> */}
         {/* task 1 */}
@@ -201,21 +215,38 @@ class App extends Component {
         {/* <Header  onKeywordChange = {this.filteredList} ></Header>
         <NewsList  list ={this.state.db} > </NewsList> */}
 
-    
 
 
-         <Register addStudent ={this.addStudent} ></Register>
-         <Students list={this.state.newDB} ></Students>
+
+        {/* <Register addStudent ={this.addStudent} ></Register>
+         <Students list={this.state.newDB} ></Students> */}
+
+
+        <Header></Header>
+        <div className="container">
+        <Switch>
+          <Route exact path="/"  component={Home}></Route>
+          <Route path="/article/:id"   component={ArticleDetails}></Route>
+          <Route path="*" render={() => {
+            return (
+              <div>
+                not found
+              </div>
+            )
+          }} ></Route>
+
+        </Switch>
+
           
-       
+        </div>
+      
 
 
 
 
 
-
-
-      </div>
+        {/* </div> */}
+      </Router>
     );
 
   }
