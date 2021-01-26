@@ -10,6 +10,11 @@ import Register from './Components/register'
 import Home from './Components/home'
 import About from './Components/about'
 import Product from './Components/product'
+import * as actions from './actions';
+import Movies from './Containers/movies';
+
+// import Provider from 'redux'
+
 
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
@@ -80,6 +85,7 @@ class App extends Component {
 
 
   }
+
 
 
 
@@ -185,6 +191,10 @@ class App extends Component {
 
     return (
 
+
+
+
+
       <Router>
 
 
@@ -194,63 +204,72 @@ class App extends Component {
         {/* task 1 */}
         {/* <img src={images[this.state.i].src} alt="" style={styles}></img>
 
-        <div style={{ 'margin-left': '42%' }}>
-          <input type='button' value='next' onClick={next}></input>
-          <input type='button' value='slide' onClick={slide}></input>
-          <input type='button' value='prev' onClick={prev}></input>
-        </div> */}
+<div style={{ 'margin-left': '42%' }}>
+  <input type='button' value='next' onClick={next}></input>
+  <input type='button' value='slide' onClick={slide}></input>
+  <input type='button' value='prev' onClick={prev}></input>
+</div> */}
 
         {/* task 2 */}
 
         {/* <section style={{ 'margin-top': '30px' }} className="ml-3">
-          <input type="text" value={this.state.value} onChange={(e) => {this.setState({value : e.target.value}) }}></input>
-          <input type="button" value="change" onClick={() => { this.setState({value : 'test'})}}></input>
-          <p>{this.state.value}</p>
+  <input type="text" value={this.state.value} onChange={(e) => {this.setState({value : e.target.value}) }}></input>
+  <input type="button" value="change" onClick={() => { this.setState({value : 'test'})}}></input>
+  <p>{this.state.value}</p>
 
 
-        </section> */}
+</section> */}
 
         {/* <h1>Day 2 </h1> */}
 
         {/* <Header  onKeywordChange = {this.filteredList} ></Header>
-        <NewsList  list ={this.state.db} > </NewsList> */}
+<NewsList  list ={this.state.db} > </NewsList> */}
 
 
 
 
         {/* <Register addStudent ={this.addStudent} ></Register>
-         <Students list={this.state.newDB} ></Students> */}
+ <Students list={this.state.newDB} ></Students> */}
 
+        {/* <h1>  Day 3 </h1> */}
+        {/* <Header></Header>
+<div className="container">
+<Switch>
+  <Route exact path="/"  component={Home}></Route>
+  <Route path="/article/:id"   component={ArticleDetails}></Route>
+  <Route path="*" render={() => {
+    return (
+      <div>
+        not found
+      </div>
+    )
+  }} ></Route>
 
-        <Header></Header>
-        <div className="container">
-        <Switch>
-          <Route exact path="/"  component={Home}></Route>
-          <Route path="/article/:id"   component={ArticleDetails}></Route>
-          <Route path="*" render={() => {
-            return (
-              <div>
-                not found
-              </div>
-            )
-          }} ></Route>
-
-        </Switch>
-
-          
-        </div>
-      
-
-
-
-
+</Switch> 
+</div> */}
 
         {/* </div> */}
+
+        {/* <h1>  Day 4 </h1> */}
+
+        <div>
+            <Movies></Movies>
+
+        </div>
+
       </Router>
+
+
+
+
+
+
     );
 
   }
 
 }
+
+
 
 export default App;
