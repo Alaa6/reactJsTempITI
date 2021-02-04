@@ -1,9 +1,8 @@
+import { Component  , createContext} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header'
-import { Component } from 'react';
 import DB from './db.json';
-
 import NewsList from './Components/newsList'
 import Students from './Components/student'
 import Register from './Components/register'
@@ -12,13 +11,13 @@ import About from './Components/about'
 import Product from './Components/product'
 import * as actions from './actions';
 import Movies from './Containers/movies';
-
 // import Provider from 'redux'
-
-
-
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import ArticleDetails from './Components/articleDetails';
+import NotFound from './Components/not-found';
+
+
+export const context = createContext();
 
 class App extends Component {
 
@@ -193,7 +192,7 @@ class App extends Component {
 
 
 
-
+ <context.Provider value= "Alaa try test Context">
 
       <Router>
 
@@ -252,12 +251,32 @@ class App extends Component {
 
         {/* <h1>  Day 4 </h1> */}
 
-        <div>
+        {/* <div>
             <Movies></Movies>
 
+        </div> */}
+
+        {/* <h1> Day 5 </h1> */}
+
+        <div className="container">
+          <div className="row">
+            <div className="col">
+
+              <Product/>
+
+              {/* <Switch>
+                <Route exact path="/" component={Home}></Route>
+                <Route path="/car/:id" component={CarDetails}></Route>
+                <Route path="*" component={NotFound} ></Route>
+
+              </Switch> */}
+
+            </div>
+          </div>
         </div>
 
       </Router>
+      </context.Provider>
 
 
 

@@ -1,7 +1,8 @@
 import '../style/header.css' ;
-import { Component } from 'react';
+import { Component  } from 'react';
 import Article from './article';
 const { Link } = require("react-router-dom");
+
 
  
 
